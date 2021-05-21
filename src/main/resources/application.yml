@@ -1,0 +1,46 @@
+debug: true
+server:
+  port: 8080
+  servlet:
+    context-path: /
+     
+spring:
+  datasource:
+    password: lms_ptit_ws@2021
+    url: jdbc:mysql://35.240.134.17/lms_ws?allowPublicKeyRetrieval=true&useSSL=false    
+    username: lms_ws_ptit
+    initialization-mode: always
+    
+  jpa:              
+    generate-ddl: true
+    hibernate:      
+      ddl-auto: update
+      
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    
+    properties:
+      hibernate:
+       format_sql: true
+    
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 3013865728881694
+            client-secret: 71c6c6447524cb0df96714ff880fa7eb
+            scope:
+            - email
+            - public_profile
+        
+          google:
+            client-id: 562235474166-2kmi4lu9u6dt5ueoalop9sn05u04rupd.apps.googleusercontent.com
+            client-secret: j_Tn0k1M2iZqmqf-Y_YjE-sc
+            scope:
+            - email
+            - profile
+          
+    
+  
+
+    
